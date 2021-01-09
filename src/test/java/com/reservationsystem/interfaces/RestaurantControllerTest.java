@@ -1,12 +1,13 @@
 package com.reservationsystem.interfaces;
 
 
-import com.reservationsystem.domain.Restaurant;
-import com.reservationsystem.interfaces.RestaurantController;
+import com.reservationsystem.domain.RestaurantRepository;
+import com.reservationsystem.domain.RestaurantRepositoryImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -21,20 +22,45 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @WebMvcTest(RestaurantController.class)
 public class RestaurantControllerTest {
- @Test
-    public void create() {
-     Restaurant restaurant = new Restaurant("bob zip", "Seoul", 1004L);
 
-     assertThat(restaurant.getName(),is("bob zip"));
-     assertThat(restaurant.getAddress(),is("Seoul"));
-     assertThat(restaurant.getId(),is(1004L));
- }
-     @Test
-     public void information(){
-     Restaurant restaurant = new Restaurant("bob zip", "Seoul", 1004L);
-         assertThat(restaurant.getInformation(),is("bob zipinSeoul"));
-     }
+    @Autowired
+    private MockMvc mvc;
 
+    @SpyBean(RestaurantRepositoryImpl.class)
+    private RestaurantRepository restaurantRepository;
+
+    @Test
+    public void list() throws Exception{
+        mvc.perform(get("/restaurants"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(
+                        containsString("\"id\":1004")
+                ))
+                .andExpect(content().string(containsString("\"name\":\"bob\"")
+                ));
+    }
+
+    @Test
+    public void detail() throws Exception{
+        mvc.perform(get("/restaurants/1004"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(
+                        containsString("\"id\":1004")
+                ))
+                .andExpect(content().string(
+                        containsString("\"name\":\"bob\"")
+                ));
+
+
+        mvc.perform(get("/restaurants/2020"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(
+                        containsString("\"id\":2020")
+                ))
+                .andExpect(content().string(
+                        containsString("\"name\":\"Cyber food\"")
+                ));
+    }
  }
 
 

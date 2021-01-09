@@ -6,3 +6,7 @@ com/reservationsystem/domain/Restaurant.java
  com.reservationsystem.domain.Restaurant
 com/reservationsystem/interfaces/RestaurantController.java
  com.reservationsystem.interfaces.RestaurantController
+com/reservationsystem/domain/RestaurantRepository.java
+ com.reservationsystem.domain.RestaurantRepository
+com/reservationsystem/domain/RestaurantRepositoryImpl.java
+ com.reservationsystem.domain.RestaurantRepositoryImpl

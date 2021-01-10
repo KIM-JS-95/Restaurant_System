@@ -1,6 +1,7 @@
 package com.reservationsystem.interfaces;
 
 
+import com.reservationsystem.domain.MenuItemRepositoryImpl;
 import com.reservationsystem.domain.RestaurantRepository;
 import com.reservationsystem.domain.RestaurantRepositoryImpl;
 import org.junit.Test;
@@ -29,6 +30,9 @@ public class RestaurantControllerTest {
     @SpyBean(RestaurantRepositoryImpl.class)
     private RestaurantRepository restaurantRepository;
 
+    @SpyBean(MenuItemRepositoryImpl.class)
+    private MenuItemRepositoryImpl menuItemRepositoryImpl;
+
     @Test
     public void list() throws Exception{
         mvc.perform(get("/restaurants"))
@@ -49,7 +53,10 @@ public class RestaurantControllerTest {
                 ))
                 .andExpect(content().string(
                         containsString("\"name\":\"bob\"")
-                ));
+                ))
+        .andExpect(content().string(
+                containsString("Kimchi")
+        ));
 
 
         mvc.perform(get("/restaurants/2020"))

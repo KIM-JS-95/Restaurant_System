@@ -1,5 +1,6 @@
 package com.reservationsystem.interfaces;
 
+import com.reservationsystem.application.RestaurantService;
 import com.reservationsystem.domain.MenuItem;
 import com.reservationsystem.domain.MenuItemRepository;
 import com.reservationsystem.domain.Restaurant;
@@ -15,19 +16,23 @@ import java.util.List;
 public class RestaurantController {
 
     @Autowired
-    private RestaurantRepository restaurantRepository;
+    private RestaurantService restaurantService;
+
     @Autowired
     private MenuItemRepository menuItemRepository;
 
     @GetMapping("/restaurants")
     public List<Restaurant> list(){
-        List<Restaurant> restaurants=restaurantRepository.findAll();
+        List<Restaurant> restaurants=restaurantService.getRestaurants();
     return restaurants;
 }
 
 @GetMapping("/restaurants/{id}")
     public Restaurant detail(@PathVariable("id") Long id) {
-    Restaurant restaurant=restaurantRepository.findById(id);
+
+        //기본정보 + 메뉴정보 제공
+   Restaurant restaurant= restaurantService.getRestaurant(id);
+
 
     List<MenuItem> menuItems = menuItemRepository.findAllByRestaurantId(id);
     restaurant.setMenuItems(menuItems);

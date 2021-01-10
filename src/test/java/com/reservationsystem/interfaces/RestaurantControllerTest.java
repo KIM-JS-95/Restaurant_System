@@ -1,6 +1,8 @@
 package com.reservationsystem.interfaces;
 
 
+import com.reservationsystem.application.RestaurantService;
+import com.reservationsystem.domain.MenuItemRepository;
 import com.reservationsystem.domain.MenuItemRepositoryImpl;
 import com.reservationsystem.domain.RestaurantRepository;
 import com.reservationsystem.domain.RestaurantRepositoryImpl;
@@ -27,11 +29,16 @@ public class RestaurantControllerTest {
     @Autowired
     private MockMvc mvc;
 
+    @SpyBean(MenuItemRepositoryImpl.class)
+    private MenuItemRepository menuItemRepository;
+
     @SpyBean(RestaurantRepositoryImpl.class)
     private RestaurantRepository restaurantRepository;
 
-    @SpyBean(MenuItemRepositoryImpl.class)
-    private MenuItemRepositoryImpl menuItemRepositoryImpl;
+    @SpyBean(RestaurantService.class)
+    private RestaurantService restaurantService;
+
+
 
     @Test
     public void list() throws Exception{

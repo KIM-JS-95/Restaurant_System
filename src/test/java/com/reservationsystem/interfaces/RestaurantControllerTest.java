@@ -5,6 +5,7 @@ import com.reservationsystem.application.RestaurantService;
 import com.reservationsystem.domain.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -20,10 +21,11 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @WebMvcTest(RestaurantController.class)
 public class RestaurantControllerTest {
 
@@ -38,7 +40,7 @@ public class RestaurantControllerTest {
     public void list() throws Exception{
         List<Restaurant> restaurants = new ArrayList<>();
 
-        restaurants.add(new Restaurant("Seoul", "bob", 1004L));
+        restaurants.add(new Restaurant( "bob", "Seoul",1004L));
 
         given(restaurantService.getRestaurants()).willReturn(restaurants);
 
@@ -84,6 +86,15 @@ public class RestaurantControllerTest {
                 .andExpect(content().string(
                         containsString("\"name\":\"Cyber food\"")
                 ));
+    }
+
+
+    @Test
+    public void create() throws Exception{
+        mvc.perform(post("/restaurants"))
+                .andExpect(status().isCreated())
+                .andExpect(header().string("location",  "/restaurants/1234"))
+        .andExpect(content().string("{}"));
     }
  }
 

@@ -12,9 +12,9 @@ com/reservationsystem/domain/RestaurantRepository.java
  com.reservationsystem.domain.RestaurantRepository
 com/reservationsystem/domain/MenuItemRepositoryImpl.java
  com.reservationsystem.domain.MenuItemRepositoryImpl
-com/reservationsystem/interfaces/RestaurantController.java
- com.reservationsystem.interfaces.RestaurantController
-com/reservationsystem/domain/MenuItemRepository.java
- com.reservationsystem.domain.MenuItemRepository
 com/reservationsystem/application/RestaurantService.java
  com.reservationsystem.application.RestaurantService
+com/reservationsystem/domain/MenuItemRepository.java
+ com.reservationsystem.domain.MenuItemRepository
+com/reservationsystem/interfaces/RestaurantController.java
+ com.reservationsystem.interfaces.RestaurantController

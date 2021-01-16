@@ -6,3 +6,5 @@ com/reservationsystem/domain/RestaurantTest.java
  com.reservationsystem.domain.RestaurantTest
 com/reservationsystem/interfaces/RestaurantControllerTest.java
  com.reservationsystem.interfaces.RestaurantControllerTest
+com/reservationsystem/domain/RestaurantRepositoryImplTest.java
+ com.reservationsystem.domain.RestaurantRepositoryImplTest

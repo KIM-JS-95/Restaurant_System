@@ -5,7 +5,6 @@ import com.reservationsystem.domain.MenuItemRepository;
 import com.reservationsystem.domain.Restaurant;
 import com.reservationsystem.domain.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,5 +35,10 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         List<Restaurant> restaurants = restaurantRepository.findAll();
         return restaurants;
+    }
+
+    public Restaurant addRestaurant(Restaurant restaurant) {
+        Restaurant saved = restaurantRepository.save(restaurant);
+        return saved;
     }
 }

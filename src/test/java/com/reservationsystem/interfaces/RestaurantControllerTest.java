@@ -3,29 +3,29 @@ package com.reservationsystem.interfaces;
 
 import com.reservationsystem.application.RestaurantService;
 import com.reservationsystem.domain.*;
+import com.reservationsystem.domain.MenuItem;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-//@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class)
 @WebMvcTest(RestaurantController.class)
 public class RestaurantControllerTest {
 
@@ -34,6 +34,9 @@ public class RestaurantControllerTest {
 
     @MockBean
     private RestaurantService restaurantService;
+
+    @MockBean
+    private MenuItemRepository menuItemRepository;
 
 
     @Test
@@ -71,7 +74,7 @@ public class RestaurantControllerTest {
                         containsString("\"id\":1004")
                 ))
                 .andExpect(content().string(
-                        containsString("\"name\":\"JOKER House\"")
+                        containsString("\"name\":\"bob\"")
                 ))
         .andExpect(content().string(
                 containsString("Kimchi")
@@ -91,10 +94,14 @@ public class RestaurantControllerTest {
 
     @Test
     public void create() throws Exception{
-        mvc.perform(post("/restaurants"))
+        mvc.perform(post("/restaurants")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"name\":\"BeRyong\",\"address\":\"Seoul\"}"))
                 .andExpect(status().isCreated())
                 .andExpect(header().string("location",  "/restaurants/1234"))
         .andExpect(content().string("{}"));
+
+        verify(restaurantService).addRestaurant(any());
     }
  }
 

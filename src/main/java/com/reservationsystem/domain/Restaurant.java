@@ -5,16 +5,23 @@ import java.util.List;
 
 public class Restaurant {
 
-    private final String name;
-    private final String address;
-    private final Long id;
+    private String name;
+    private String address;
+    private Long id;
     private List<MenuItem> menuItems= new ArrayList<MenuItem>();
 
+    public Restaurant() {
+    }
 
     public Restaurant(String name, String address, Long id){
         this.address =address;
         this.name=name;
         this.id=id;
+    }
+
+    public Restaurant(String name , String address) {
+    this.name = name;
+    this.address = address;
     }
 
     public String getName() {
@@ -44,5 +51,9 @@ public class Restaurant {
         for(MenuItem menuItem : menuItems){
             addMenuItem(menuItem);
         }
+    }
+
+    public void setId(long id) {
+        this.id=id;
     }
 }

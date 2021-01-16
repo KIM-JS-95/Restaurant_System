@@ -11,8 +11,10 @@ import org.mockito.MockitoAnnotations;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 
 
@@ -48,6 +50,7 @@ public class RestaurantServiceTest{
         restaurants.add(restaurant);
         given(restaurantRepository.findAll()).willReturn(restaurants);
         given(restaurantRepository.findById(1004L)).willReturn(restaurant);
+
     }
 
 
@@ -66,5 +69,15 @@ public class RestaurantServiceTest{
 
         Restaurant restaurant = restaurants.get(0);
         assertThat(restaurant.getId(), is(1004L));
+    }
+
+    @Test
+    public void addRestaurant(){
+        Restaurant restaurant = new Restaurant("BeRyong", "Busan");
+        Restaurant saved = new Restaurant("BeRyong", "Busan", 1234L);
+        Restaurant created =restaurantService.addRestaurant(restaurant);
+
+        given(restaurantRepository.save(any())).willReturn(saved);
+        assertThat(created.getId(), is(1234L));
     }
 }

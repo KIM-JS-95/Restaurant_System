@@ -1,12 +1,10 @@
 package com.reservationsystem.application;
 
-import com.reservationsystem.domain.MenuItem;
-import com.reservationsystem.domain.MenuItemRepository;
-import com.reservationsystem.domain.Restaurant;
-import com.reservationsystem.domain.RestaurantRepository;
+import com.reservationsystem.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 
@@ -24,7 +22,8 @@ public class RestaurantService {
     }
 
     public Restaurant getRestaurant(Long id){
-        Restaurant restaurant = restaurantRepository.findById(id);
+        Restaurant restaurant = restaurantRepository.findById(id)
+                .orElseThrow(() -> new RestaurantNotFoundException(id));
 
         List<MenuItem> menuItems = menuItemRepository.findAllByRestaurantId(id);
         restaurant.setMenuItems(menuItems);
@@ -40,5 +39,14 @@ public class RestaurantService {
     public Restaurant addRestaurant(Restaurant restaurant) {
         Restaurant saved = restaurantRepository.save(restaurant);
         return saved;
+    }
+
+    @Transactional
+    public Restaurant updateRestaurant(String name, String address, long id) {
+        Restaurant restaurant = (Restaurant) restaurantRepository.findById(id).orElse(null);
+
+        restaurant.updatedInformation(name, address);
+
+        return restaurant;
     }
 }

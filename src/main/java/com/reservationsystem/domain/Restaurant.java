@@ -1,59 +1,53 @@
 package com.reservationsystem.domain;
 
+import lombok.*;
+import org.springframework.stereotype.Service;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Restaurant {
 
-    private String name;
-    private String address;
+
+    @Id
+    @GeneratedValue
+    @Setter
     private Long id;
-    private List<MenuItem> menuItems= new ArrayList<MenuItem>();
 
-    public Restaurant() {
-    }
+    @NotEmpty
+    private String name;
+    @NotEmpty
+    private String address;
 
-    public Restaurant(String name, String address, Long id){
-        this.address =address;
-        this.name=name;
-        this.id=id;
-    }
+//    private String regionName;
+//    private String categoryName;
+//    private String tagNames;
 
-    public Restaurant(String name , String address) {
-    this.name = name;
-    this.address = address;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getAddress() {
-        return address;
-    }
+    @Transient
+    private List<MenuItem> menuItems;
 
     public String getInformation(){
-        return name + "in" + address;
+        return name + " in " + address;
     }
 
-    public List<MenuItem> getMenuItems(){
-        return menuItems;
-    }
-    public void addMenuItem(MenuItem menuItem){
-     menuItems.add(menuItem);
-    }
 
     public void setMenuItems(List<MenuItem> menuItems){
-        for(MenuItem menuItem : menuItems){
-            addMenuItem(menuItem);
-        }
+        this.menuItems = new ArrayList<>(menuItems);
+
     }
 
-    public void setId(long id) {
-        this.id=id;
+    public void updatedInformation(String name, String address) {
+        this.name=name;
+        this.address = address;
     }
 }

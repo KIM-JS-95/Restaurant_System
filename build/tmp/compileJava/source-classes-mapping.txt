@@ -1,20 +1,22 @@
 com/reservationsystem/domain/MenuItem.java
  com.reservationsystem.domain.MenuItem
-com/reservationsystem/domain/MenuItemRepositoryImpl.java
- com.reservationsystem.domain.MenuItemRepositoryImpl
+ com.reservationsystem.domain.MenuItem$MenuItemBuilder
+com/reservationsystem/interfaces/RestaurantErrorAdvice.java
+ com.reservationsystem.interfaces.RestaurantErrorAdvice
 com/reservationsystem/interfaces/WelcomeController.java
  com.reservationsystem.interfaces.WelcomeController
 com/reservationsystem/domain/Restaurant.java
  com.reservationsystem.domain.Restaurant
-com/reservationsystem/interfaces/RestaurantController.java
- com.reservationsystem.interfaces.RestaurantController
-com/reservationsystem/domain/RestaurantRepository.java
- com.reservationsystem.domain.RestaurantRepository
-com/reservationsystem/application/RestaurantService.java
- com.reservationsystem.application.RestaurantService
-com/reservationsystem/ReservationApplication.java
- com.reservationsystem.ReservationApplication
+ com.reservationsystem.domain.Restaurant$RestaurantBuilder
 com/reservationsystem/domain/MenuItemRepository.java
  com.reservationsystem.domain.MenuItemRepository
-com/reservationsystem/domain/RestaurantRepositoryImpl.java
- com.reservationsystem.domain.RestaurantRepositoryImpl
+com/reservationsystem/domain/RestaurantRepository.java
+ com.reservationsystem.domain.RestaurantRepository
+com/reservationsystem/domain/RestaurantNotFoundException.java
+ com.reservationsystem.domain.RestaurantNotFoundException
+com/reservationsystem/ReservationApplication.java
+ com.reservationsystem.ReservationApplication
+com/reservationsystem/interfaces/RestaurantController.java
+ com.reservationsystem.interfaces.RestaurantController
+com/reservationsystem/application/RestaurantService.java
+ com.reservationsystem.application.RestaurantService

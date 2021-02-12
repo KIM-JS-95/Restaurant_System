@@ -22,7 +22,7 @@ public class RestaurantService {
         this.menuItemRepository = menuItemRepository;
     }
 
-    public Restaurant getRestaurant(Long id){
+    public Restaurant getRestaurant(Long id) {
         Restaurant restaurant = restaurantRepository.findById(id)
                 .orElseThrow(() -> new RestaurantNotFoundException(id));
 

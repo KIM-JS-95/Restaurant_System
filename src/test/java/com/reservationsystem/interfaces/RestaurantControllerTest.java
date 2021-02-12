@@ -13,7 +13,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -89,7 +88,7 @@ public class RestaurantControllerTest {
                         containsString("\"id\":1004")
                 ))
                 .andExpect(content().string(
-                        containsString("\"name\":\"JOKER House\"")
+                        containsString("\"name\":\"JOKER HOUSE\"")
                 ))
         .andExpect(content().string(
                 containsString("Kimchi")
@@ -117,7 +116,7 @@ public class RestaurantControllerTest {
     }
 
     @Test
-    public void create() throws Exception{
+    public void createWithValidData() throws Exception{
         given(restaurantService.addRestaurant(any())).will(invocation -> {
                     Restaurant restaurant = invocation.getArgument(0);
                     return Restaurant.builder()
@@ -138,15 +137,34 @@ public class RestaurantControllerTest {
     }
 
     @Test
-    public void update() throws Exception {
+    public void createWithInValidData() throws Exception{
+        mvc.perform(post("/restaurants")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"name\":\"\",\"address\":\"\"}"))
+                .andExpect(status().isBadRequest());
 
+    }
+
+
+    @Test
+    public void updateWithValidData() throws Exception {
         mvc.perform(patch("/restaurants/1004")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"JOKER bar\", \"address\":\"Seoul\"}"))
+                .content("{\"name\":\"JOKER bar\", \"address\":\"Busan\"}"))
                 .andExpect(status().isOk());
 
         verify(restaurantService).updateRestaurant("JOKER bar" , "Busan", 1004L);
     }
+
+    @Test
+    public void updateWithInValidData() throws Exception {
+        mvc.perform(patch("/restaurants/1004")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"name\":\"\", \"address\":\"\"}"))
+                .andExpect(status().isBadRequest());
+
+    }
+
  }
 
 

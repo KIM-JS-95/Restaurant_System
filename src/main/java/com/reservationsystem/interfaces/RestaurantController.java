@@ -43,11 +43,14 @@ public class RestaurantController {
         throws URISyntaxException {
     String name = resource.getName();
     String address = resource.getAddress();
+    List<MenuItem> menuItems = resource.getMenuItems();
 
-        Restaurant restaurant = restaurantService.addRestaurant( Restaurant.builder()
-                .name(name)
-                .address(address)
-                .build());
+    Restaurant restaurant = restaurantService.addRestaurant(
+            Restaurant.builder()
+                    .name(name)
+                    .address(address)
+                    .menuItems(menuItems)
+                    .build());
 
         URI location = new URI("/restaurants/" + restaurant.getId());
         return ResponseEntity.created(location).body("{}");

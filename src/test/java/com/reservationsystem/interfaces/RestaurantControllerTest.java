@@ -54,7 +54,7 @@ public class RestaurantControllerTest {
                 .andExpect(content().string(
                         containsString("\"id\":1004")
                 ))
-                .andExpect(content().string(containsString("\"name\":\"JOKER House\"")
+                .andExpect(content().string(containsString("\"name\":\"JOKER HOUSE\"")
                 ));
     }
 

@@ -1,8 +1,7 @@
 package com.reservationsystem.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import org.springframework.stereotype.Service;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -29,23 +28,18 @@ public class Restaurant {
     @NotEmpty
     private String address;
 
-//    private String regionName;
-//    private String categoryName;
-//    private String tagNames;
-
     @Transient
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<MenuItem> menuItems;
 
     public String getInformation(){
         return name + " in " + address;
     }
 
-
     public void setMenuItems(List<MenuItem> menuItems){
         this.menuItems = new ArrayList<>(menuItems);
 
     }
-
     public void updatedInformation(String name, String address) {
         this.name=name;
         this.address = address;

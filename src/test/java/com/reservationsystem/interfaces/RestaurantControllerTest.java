@@ -60,26 +60,27 @@ public class RestaurantControllerTest {
 
     @Test
     public void detailWithExisted() throws Exception{
-    Restaurant restaurant1 =Restaurant.builder()
-            .id(1004L)
-            .name("JOKER HOUSE")
-            .address("Seoul")
-            .build();
+        Restaurant restaurant = Restaurant.builder()
+                .id(1004L)
+                .name("JOKER HOUSE")
+                .address("Seoul")
+                .build();
 
         MenuItem menuItem = MenuItem.builder()
                 .name("Kimchi")
                 .build();
 
-    restaurant1.setMenuItems(Arrays.asList(menuItem));
+    restaurant.setMenuItems(Arrays.asList(menuItem));
 
-        Restaurant restaurant2 = Restaurant.builder()
-                .id(2020L)
-                .name("Cyber food")
-                .address("Seoul")
-                .build();
+    Review review = Review.builder()
+            .name("JOKER")
+            .score(3)
+            .description("Good!")
+            .build();
 
-        given(restaurantService.getRestaurant(1004L)).willReturn(restaurant1);
-        given(restaurantService.getRestaurant(2020L)).willReturn(restaurant2);
+    restaurant.setReviews(Arrays.asList(review));
+
+    given(restaurantService.getRestaurant(1004L)).willReturn(restaurant);
 
 
         mvc.perform(get("/restaurants/1004"))
@@ -90,19 +91,13 @@ public class RestaurantControllerTest {
                 .andExpect(content().string(
                         containsString("\"name\":\"JOKER HOUSE\"")
                 ))
-        .andExpect(content().string(
-                containsString("Kimchi")
-        ));
-
-
-        mvc.perform(get("/restaurants/2020"))
-                .andExpect(status().isOk())
                 .andExpect(content().string(
-                        containsString("\"id\":2020")
+                        containsString("Kimchi")
                 ))
                 .andExpect(content().string(
-                        containsString("\"name\":\"Cyber food\"")
+                        containsString("Good!")
                 ));
+
     }
 
     @Test

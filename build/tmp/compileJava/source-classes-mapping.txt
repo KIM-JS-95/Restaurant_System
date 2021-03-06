@@ -1,16 +1,7 @@
-com/reservationsystem/ReservationApplication.java
- com.reservationsystem.ReservationApplication
 com/reservationsystem/interfaces/RestaurantErrorAdvice.java
  com.reservationsystem.interfaces.RestaurantErrorAdvice
-com/reservationsystem/interfaces/WelcomeController.java
- com.reservationsystem.interfaces.WelcomeController
-com/reservationsystem/domain/MenuItemRepository.java
- com.reservationsystem.domain.MenuItemRepository
-com/reservationsystem/domain/RestaurantNotFoundException.java
- com.reservationsystem.domain.RestaurantNotFoundException
-com/reservationsystem/domain/MenuItem.java
- com.reservationsystem.domain.MenuItem
- com.reservationsystem.domain.MenuItem$MenuItemBuilder
+com/reservationsystem/application/ReviewService.java
+ com.reservationsystem.application.ReviewService
 com/reservationsystem/application/MenuItemService.java
  com.reservationsystem.application.MenuItemService
 com/reservationsystem/domain/Restaurant.java
@@ -18,9 +9,27 @@ com/reservationsystem/domain/Restaurant.java
  com.reservationsystem.domain.Restaurant$RestaurantBuilder
 com/reservationsystem/interfaces/RestaurantController.java
  com.reservationsystem.interfaces.RestaurantController
-com/reservationsystem/domain/RestaurantRepository.java
- com.reservationsystem.domain.RestaurantRepository
+com/reservationsystem/domain/RestaurantNotFoundException.java
+ com.reservationsystem.domain.RestaurantNotFoundException
+com/reservationsystem/domain/MenuItemRepository.java
+ com.reservationsystem.domain.MenuItemRepository
 com/reservationsystem/application/RestaurantService.java
  com.reservationsystem.application.RestaurantService
+com/reservationsystem/domain/MenuItem.java
+ com.reservationsystem.domain.MenuItem
+ com.reservationsystem.domain.MenuItem$MenuItemBuilder
+com/reservationsystem/interfaces/WelcomeController.java
+ com.reservationsystem.interfaces.WelcomeController
+com/reservationsystem/domain/RestaurantRepository.java
+ com.reservationsystem.domain.RestaurantRepository
+com/reservationsystem/domain/ReviewRepository.java
+ com.reservationsystem.domain.ReviewRepository
+com/reservationsystem/domain/Review.java
+ com.reservationsystem.domain.Review
+ com.reservationsystem.domain.Review$ReviewBuilder
+com/reservationsystem/ReservationApplication.java
+ com.reservationsystem.ReservationApplication
+com/reservationsystem/interfaces/ReviewController.java
+ com.reservationsystem.interfaces.ReviewController
 com/reservationsystem/interfaces/MenuItemController.java
  com.reservationsystem.interfaces.MenuItemController

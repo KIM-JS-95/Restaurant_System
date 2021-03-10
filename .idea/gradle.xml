@@ -9,6 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/eat-common" />
+            <option value="$PROJECT_DIR$/eatgo-admin-api" />
           </set>
         </option>
       </GradleProjectSettings>

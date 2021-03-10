@@ -8,7 +8,7 @@ com/reservationsystem/application/ReviewServiceTest.java
  com.reservationsystem.application.ReviewServiceTest
 com/reservationsystem/interfaces/ReviewControllerTest.java
  com.reservationsystem.interfaces.ReviewControllerTest
-com/reservationsystem/interfaces/RestaurantControllerTest.java
- com.reservationsystem.interfaces.RestaurantControllerTest
 com/reservationsystem/application/RestaurantServiceTest.java
  com.reservationsystem.application.RestaurantServiceTest
+com/reservationsystem/interfaces/RestaurantControllerTest.java
+ com.reservationsystem.interfaces.RestaurantControllerTest

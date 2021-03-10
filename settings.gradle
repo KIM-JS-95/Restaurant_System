@@ -4,8 +4,9 @@ pluginManagement{
     }
 }
 
-rootProject.name = 'reservating_system'
+rootProject.name = 'reservatingsystem'
 
 include 'eatgo-admin-api'
 include 'eat-common'
+include 'eatgo-customer-api'
 

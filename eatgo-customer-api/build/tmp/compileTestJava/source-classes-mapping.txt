@@ -1,10 +1,14 @@
 com/reservationsystem/application/ReviewServiceTest.java
  com.reservationsystem.application.ReviewServiceTest
-com/reservationsystem/EatgoCustomerApiApplicationTest.java
- com.reservationsystem.EatgoCustomerApiApplicationTest
-com/reservationsystem/interfaces/ReviewControllerTest.java
- com.reservationsystem.interfaces.ReviewControllerTest
-com/reservationsystem/interfaces/RestaurantControllerTest.java
- com.reservationsystem.interfaces.RestaurantControllerTest
 com/reservationsystem/application/RestaurantServiceTest.java
  com.reservationsystem.application.RestaurantServiceTest
+com/reservationsystem/interfaces/ReviewControllerTest.java
+ com.reservationsystem.interfaces.ReviewControllerTest
+com/reservationsystem/application/RegionServiceTest.java
+ com.reservationsystem.application.RegionServiceTest
+com/reservationsystem/interfaces/RegionControllerTest.java
+ com.reservationsystem.interfaces.RegionControllerTest
+com/reservationsystem/interfaces/RestaurantControllerTest.java
+ com.reservationsystem.interfaces.RestaurantControllerTest
+com/reservationsystem/EatgoCustomerApiApplicationTest.java
+ com.reservationsystem.EatgoCustomerApiApplicationTest

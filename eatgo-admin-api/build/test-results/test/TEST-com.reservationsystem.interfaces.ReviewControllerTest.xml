@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reservationsystem.interfaces.ReviewControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-21T14:20:19" hostname="DESKTOP-R7AB2GV" time="0.016">
+  <properties/>
+  <testcase name="list" classname="com.reservationsystem.interfaces.ReviewControllerTest" time="0.016"/>
+  <system-out><![CDATA[2021-03-21 23:20:18.201  INFO 3220 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.reservationsystem.interfaces.ReviewControllerTest], using SpringBootContextLoader
+2021-03-21 23:20:18.204  INFO 3220 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.reservationsystem.interfaces.ReviewControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-03-21 23:20:18.204  INFO 3220 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.reservationsystem.interfaces.ReviewControllerTest]: ReviewControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-03-21 23:20:18.208  INFO 3220 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.reservationsystem.EatgoAdminApiApplication for test class com.reservationsystem.interfaces.ReviewControllerTest
+2021-03-21 23:20:18.209  INFO 3220 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-03-21 23:20:18.210  INFO 3220 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@268dffca, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2745e5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e0ab582, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6d5ca4d6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@24666518, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e54141c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@553904f1, org.springframework.test.context.event.EventPublishingTestExecutionListener@5d4b6094, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4a928080, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7458993a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@69db15cc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6f9297a3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@315a8c51]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2021-03-21 23:20:18.272  INFO 3220 --- [    Test worker] c.r.interfaces.ReviewControllerTest      : Starting ReviewControllerTest on DESKTOP-R7AB2GV with PID 3220 (started by JAESEUNG in C:\Users\JAESEUNG\IdeaProjects\reservating_system\eatgo-admin-api)
+2021-03-21 23:20:18.273  INFO 3220 --- [    Test worker] c.r.interfaces.ReviewControllerTest      : No active profile set, falling back to default profiles: default
+2021-03-21 23:20:18.792  INFO 3220 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-21 23:20:19.014  INFO 3220 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-03-21 23:20:19.014  INFO 3220 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-03-21 23:20:19.031  INFO 3220 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 17 ms
+2021-03-21 23:20:19.059  INFO 3220 --- [    Test worker] c.r.interfaces.ReviewControllerTest      : Started ReviewControllerTest in 0.846 seconds (JVM running for 8.605)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

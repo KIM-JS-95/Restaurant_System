@@ -4,8 +4,12 @@ com/reservationsystem/EatgoAdminApiApplication.java
  com.reservationsystem.EatgoAdminApiApplication
 com/reservationsystem/interfaces/WelcomeController.java
  com.reservationsystem.interfaces.WelcomeController
+com/reservationsystem/application/RegionService.java
+ com.reservationsystem.application.RegionService
 com/reservationsystem/application/ReviewService.java
  com.reservationsystem.application.ReviewService
+com/reservationsystem/interfaces/RegionController.java
+ com.reservationsystem.interfaces.RegionController
 com/reservationsystem/application/MenuItemService.java
  com.reservationsystem.application.MenuItemService
 com/reservationsystem/interfaces/RestaurantController.java
@@ -16,5 +20,3 @@ com/reservationsystem/application/RestaurantService.java
  com.reservationsystem.application.RestaurantService
 com/reservationsystem/interfaces/MenuItemController.java
  com.reservationsystem.interfaces.MenuItemController
-com/reservationsystem/interfaces/RegionController.java
- com.reservationsystem.interfaces.RegionController

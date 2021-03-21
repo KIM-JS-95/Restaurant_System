@@ -3,13 +3,11 @@ package com.reservationsystem.interfaces;
 
 import com.reservationsystem.application.RestaurantService;
 import com.reservationsystem.domain.*;
-import com.reservationsystem.interfaces.RestaurantController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -18,9 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.Matchers.containsString;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -109,56 +105,6 @@ public class RestaurantControllerTest {
         mvc.perform(get("/restaurants/404"))
                 .andExpect(status().isNotFound())
                 .andExpect(content().string("{}"));
-    }
-
-    @Test
-    public void createWithValidData() throws Exception{
-        given(restaurantService.addRestaurant(any())).will(invocation -> {
-                    Restaurant restaurant = invocation.getArgument(0);
-                    return Restaurant.builder()
-                            .name(restaurant.getName())
-                            .address(restaurant.getAddress())
-                            .id(1234L)
-                            .build();
-                });
-
-        mvc.perform(post("/restaurants")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"BeRyong\",\"address\":\"Busan\"}"))
-                .andExpect(status().isCreated())
-                .andExpect(header().string("location",  "/restaurants/1234"))
-        .andExpect(content().string("{}"));
-
-        verify(restaurantService).addRestaurant(any());
-    }
-
-    @Test
-    public void createWithInValidData() throws Exception{
-        mvc.perform(post("/restaurants")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"\",\"address\":\"\"}"))
-                .andExpect(status().isBadRequest());
-
-    }
-
-
-    @Test
-    public void updateWithValidData() throws Exception {
-        mvc.perform(patch("/restaurants/1004")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"JOKER bar\", \"address\":\"Busan\"}"))
-                .andExpect(status().isOk());
-
-        verify(restaurantService).updateRestaurant("JOKER bar" , "Busan", 1004L);
-    }
-
-    @Test
-    public void updateWithInValidData() throws Exception {
-        mvc.perform(patch("/restaurants/1004")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"\", \"address\":\"\"}"))
-                .andExpect(status().isBadRequest());
-
     }
 
  }

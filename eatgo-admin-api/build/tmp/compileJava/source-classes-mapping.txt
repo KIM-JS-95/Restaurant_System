@@ -16,3 +16,5 @@ com/reservationsystem/application/RestaurantService.java
  com.reservationsystem.application.RestaurantService
 com/reservationsystem/interfaces/MenuItemController.java
  com.reservationsystem.interfaces.MenuItemController
+com/reservationsystem/interfaces/RegionController.java
+ com.reservationsystem.interfaces.RegionController

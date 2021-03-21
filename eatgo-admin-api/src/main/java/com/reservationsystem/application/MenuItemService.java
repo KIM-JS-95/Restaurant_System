@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,5 +35,12 @@ public class MenuItemService {
         }
         menuItem.setRestaurantId(restaurantId);
         menuItemRepository.save(menuItem);
+    }
+
+    public List<MenuItem> getMenuItems(long restaurantId) {
+
+        List<MenuItem> menuItems =menuItemRepository.findAllByRestaurantId(restaurantId);
+
+        return menuItems;
     }
 }

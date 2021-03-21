@@ -15,3 +15,6 @@ com/reservationsystem/domain/Review.java
  com.reservationsystem.domain.Review$ReviewBuilder
 com/reservationsystem/domain/MenuItemRepository.java
  com.reservationsystem.domain.MenuItemRepository
+com/reservationsystem/domain/Region.java
+ com.reservationsystem.domain.Region
+ com.reservationsystem.domain.Region$RegionBuilder

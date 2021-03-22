@@ -1,8 +1,14 @@
 com/reservationsystem/domain/MenuItem.java
  com.reservationsystem.domain.MenuItem
  com.reservationsystem.domain.MenuItem$MenuItemBuilder
-com/reservationsystem/domain/RegionRepository.java
- com.reservationsystem.domain.RegionRepository
+com/reservationsystem/domain/CategoryRepository.java
+ com.reservationsystem.domain.CategoryRepository
+com/reservationsystem/domain/Category.java
+ com.reservationsystem.domain.Category
+ com.reservationsystem.domain.Category$CategoryBuilder
+com/reservationsystem/domain/Region.java
+ com.reservationsystem.domain.Region
+ com.reservationsystem.domain.Region$RegionBuilder
 com/reservationsystem/domain/Restaurant.java
  com.reservationsystem.domain.Restaurant
  com.reservationsystem.domain.Restaurant$RestaurantBuilder
@@ -17,11 +23,5 @@ com/reservationsystem/domain/Review.java
  com.reservationsystem.domain.Review$ReviewBuilder
 com/reservationsystem/domain/MenuItemRepository.java
  com.reservationsystem.domain.MenuItemRepository
-com/reservationsystem/domain/CategoryRepository.java
- com.reservationsystem.domain.CategoryRepository
-com/reservationsystem/domain/Category.java
- com.reservationsystem.domain.Category
- com.reservationsystem.domain.Category$CategoryBuilder
-com/reservationsystem/domain/Region.java
- com.reservationsystem.domain.Region
- com.reservationsystem.domain.Region$RegionBuilder
+com/reservationsystem/domain/RegionRepository.java
+ com.reservationsystem.domain.RegionRepository

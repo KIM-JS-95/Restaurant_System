@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reservationsystem.interfaces.RegionControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-22T14:22:12" hostname="DESKTOP-R7AB2GV" time="0.016">
+  <properties/>
+  <testcase name="list" classname="com.reservationsystem.interfaces.RegionControllerTest" time="0.016"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2021-03-22 23:22:11.203  INFO 4452 --- [    Test worker] c.r.interfaces.RegionControllerTest      : Starting RegionControllerTest on DESKTOP-R7AB2GV with PID 4452 (started by JAESEUNG in C:\Users\JAESEUNG\IdeaProjects\reservating_system\eatgo-customer-api)
+2021-03-22 23:22:11.204  INFO 4452 --- [    Test worker] c.r.interfaces.RegionControllerTest      : No active profile set, falling back to default profiles: default
+2021-03-22 23:22:11.781  INFO 4452 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-22 23:22:12.042  INFO 4452 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-03-22 23:22:12.042  INFO 4452 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-03-22 23:22:12.059  INFO 4452 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 17 ms
+2021-03-22 23:22:12.080  INFO 4452 --- [    Test worker] c.r.interfaces.RegionControllerTest      : Started RegionControllerTest in 0.943 seconds (JVM running for 7.28)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

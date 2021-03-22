@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reservationsystem.interfaces.RestaurantControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-22T14:22:13" hostname="DESKTOP-R7AB2GV" time="0.095">
+  <properties/>
+  <testcase name="list" classname="com.reservationsystem.interfaces.RestaurantControllerTest" time="0.037"/>
+  <testcase name="detailWithNotExisted" classname="com.reservationsystem.interfaces.RestaurantControllerTest" time="0.032"/>
+  <testcase name="detailWithExisted" classname="com.reservationsystem.interfaces.RestaurantControllerTest" time="0.02"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2021-03-22 23:22:12.166  INFO 4452 --- [    Test worker] c.r.interfaces.RestaurantControllerTest  : Starting RestaurantControllerTest on DESKTOP-R7AB2GV with PID 4452 (started by JAESEUNG in C:\Users\JAESEUNG\IdeaProjects\reservating_system\eatgo-customer-api)
+2021-03-22 23:22:12.168  INFO 4452 --- [    Test worker] c.r.interfaces.RestaurantControllerTest  : No active profile set, falling back to default profiles: default
+2021-03-22 23:22:12.769  INFO 4452 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-22 23:22:13.038  INFO 4452 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-03-22 23:22:13.039  INFO 4452 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-03-22 23:22:13.057  INFO 4452 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 18 ms
+2021-03-22 23:22:13.094  INFO 4452 --- [    Test worker] c.r.interfaces.RestaurantControllerTest  : Started RestaurantControllerTest in 0.985 seconds (JVM running for 8.294)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

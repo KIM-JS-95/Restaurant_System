@@ -5,9 +5,7 @@ import com.reservationsystem.domain.RegionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 @Service
 public class RegionService {

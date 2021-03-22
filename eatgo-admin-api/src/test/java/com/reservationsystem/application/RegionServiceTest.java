@@ -2,11 +2,9 @@ package com.reservationsystem.application;
 
 import com.reservationsystem.domain.Region;
 import com.reservationsystem.domain.RegionRepository;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.mock.mockito.MockBean;
 

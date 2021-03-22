@@ -2,7 +2,6 @@ package com.reservationsystem.interfaces;
 
 import com.reservationsystem.application.RegionService;
 import com.reservationsystem.domain.Region;
-import org.graalvm.compiler.core.GraalCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
 

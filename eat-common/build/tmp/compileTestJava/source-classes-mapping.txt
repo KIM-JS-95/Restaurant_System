@@ -2,3 +2,5 @@ com/reservationsystem/domain/RestaurantTests.java
  com.reservationsystem.domain.RestaurantTests
 com/reservationsystem/domain/RegionTests.java
  com.reservationsystem.domain.RegionTests
+com/reservationsystem/domain/CategoryTests.java
+ com.reservationsystem.domain.CategoryTests

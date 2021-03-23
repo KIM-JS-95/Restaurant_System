@@ -1,8 +1,6 @@
 package com.reservationsystem.application;
 
 import com.reservationsystem.domain.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -46,4 +44,7 @@ public class RestaurantService {
 
         return restaurant;
     }
+
+
+
 }

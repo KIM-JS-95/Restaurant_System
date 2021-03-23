@@ -33,8 +33,10 @@ public class RestaurantService {
         return restaurant;
     }
 
-    public List<Restaurant> getRestaurants() {
-        List<Restaurant> restaurants = restaurantRepository.findAll();
+    public List<Restaurant> getRestaurants(String region, long categoryId) {
+        //TODO: region filtering
+
+        List<Restaurant> restaurants = restaurantRepository.findAllByAddressContainingByCategoryId(region, categoryId);
         return restaurants;
     }
 
@@ -51,4 +53,5 @@ public class RestaurantService {
 
         return restaurant;
     }
+
 }

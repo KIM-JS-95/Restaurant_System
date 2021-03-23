@@ -3,7 +3,6 @@ package com.reservationsystem.interfaces;
 
 import com.reservationsystem.application.RestaurantService;
 import com.reservationsystem.domain.*;
-import com.reservationsystem.domain.MenuItem;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import static org.hamcrest.Matchers.containsString;
 import static org.mockito.ArgumentMatchers.any;
@@ -43,6 +41,7 @@ public class RestaurantControllerTest {
         List<Restaurant> restaurants = new ArrayList<>();
         restaurants.add(Restaurant.builder()
                 .id(1004L)
+                .categoryId(1L)
                 .name("JOKER HOUSE")
                 .address("Seoul")
                 .build());
@@ -62,6 +61,7 @@ public class RestaurantControllerTest {
     public void detailWithExisted() throws Exception{
         Restaurant restaurant = Restaurant.builder()
                 .id(1004L)
+                .categoryId(1L)
                 .name("JOKER HOUSE")
                 .address("Seoul")
                 .build();
@@ -103,9 +103,10 @@ public class RestaurantControllerTest {
                             .build();
                 });
 
+
         mvc.perform(post("/restaurants")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"BeRyong\",\"address\":\"Busan\"}"))
+                .content("{\"categoryId\":1,\"name\":\"BeRyong\",\"address\":\"Busan\"}"))
                 .andExpect(status().isCreated())
                 .andExpect(header().string("location",  "/restaurants/1234"))
         .andExpect(content().string("{}"));
@@ -117,7 +118,7 @@ public class RestaurantControllerTest {
     public void createWithInValidData() throws Exception{
         mvc.perform(post("/restaurants")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"\",\"address\":\"\"}"))
+                .content("{\"categoryId\":1,\"name\":\"\",\"address\":\"\"}"))
                 .andExpect(status().isBadRequest());
 
     }
@@ -127,7 +128,7 @@ public class RestaurantControllerTest {
     public void updateWithValidData() throws Exception {
         mvc.perform(patch("/restaurants/1004")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"JOKER bar\", \"address\":\"Busan\"}"))
+                .content("{\"categoryId\":1,\"name\":\"JOKER bar\", \"address\":\"Busan\"}"))
                 .andExpect(status().isOk());
 
         verify(restaurantService).updateRestaurant("JOKER bar" , "Busan", 1004L);
@@ -137,7 +138,7 @@ public class RestaurantControllerTest {
     public void updateWithInValidData() throws Exception {
         mvc.perform(patch("/restaurants/1004")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"\", \"address\":\"\"}"))
+                .content("{\"categoryId\":1,\"name\":\"\", \"address\":\"\"}"))
                 .andExpect(status().isBadRequest());
 
     }

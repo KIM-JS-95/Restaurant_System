@@ -4,7 +4,6 @@ import com.reservationsystem.application.RestaurantService;
 import com.reservationsystem.domain.MenuItem;
 import com.reservationsystem.domain.MenuItemRepository;
 import com.reservationsystem.domain.Restaurant;
-import com.reservationsystem.domain.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,8 +24,8 @@ public class RestaurantController {
     private MenuItemRepository menuItemRepository;
 
     @GetMapping("/restaurants")
-    public List<Restaurant> list(){
-        List<Restaurant> restaurants=restaurantService.getRestaurants();
+    public List<Restaurant> list() {
+     List<Restaurant> restaurants=restaurantService.getRestaurants();
     return restaurants;
 }
 

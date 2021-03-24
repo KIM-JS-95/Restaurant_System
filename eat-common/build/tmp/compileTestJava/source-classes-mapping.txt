@@ -1,5 +1,7 @@
 com/reservationsystem/domain/RestaurantTests.java
  com.reservationsystem.domain.RestaurantTests
+com/reservationsystem/domain/UserTests.java
+ com.reservationsystem.domain.UserTests
 com/reservationsystem/domain/CategoryTests.java
  com.reservationsystem.domain.CategoryTests
 com/reservationsystem/domain/RegionTests.java

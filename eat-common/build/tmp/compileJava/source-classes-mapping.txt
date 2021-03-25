@@ -1,11 +1,3 @@
-com/reservationsystem/domain/MenuItem.java
- com.reservationsystem.domain.MenuItem
- com.reservationsystem.domain.MenuItem$MenuItemBuilder
-com/reservationsystem/domain/CategoryRepository.java
- com.reservationsystem.domain.CategoryRepository
-com/reservationsystem/domain/User.java
- com.reservationsystem.domain.User
- com.reservationsystem.domain.User$UserBuilder
 com/reservationsystem/domain/Category.java
  com.reservationsystem.domain.Category
  com.reservationsystem.domain.Category$CategoryBuilder
@@ -17,6 +9,20 @@ com/reservationsystem/domain/Restaurant.java
  com.reservationsystem.domain.Restaurant$RestaurantBuilder
 com/reservationsystem/domain/RestaurantNotFoundException.java
  com.reservationsystem.domain.RestaurantNotFoundException
+com/reservationsystem/domain/MenuItemRepository.java
+ com.reservationsystem.domain.MenuItemRepository
+com/reservationsystem/domain/RegionRepository.java
+ com.reservationsystem.domain.RegionRepository
+com/reservationsystem/domain/MenuItem.java
+ com.reservationsystem.domain.MenuItem
+ com.reservationsystem.domain.MenuItem$MenuItemBuilder
+com/reservationsystem/domain/UserRepository.java
+ com.reservationsystem.domain.UserRepository
+com/reservationsystem/domain/CategoryRepository.java
+ com.reservationsystem.domain.CategoryRepository
+com/reservationsystem/domain/User.java
+ com.reservationsystem.domain.User
+ com.reservationsystem.domain.User$UserBuilder
 com/reservationsystem/domain/RestaurantRepository.java
  com.reservationsystem.domain.RestaurantRepository
 com/reservationsystem/domain/ReviewRepository.java
@@ -24,9 +30,3 @@ com/reservationsystem/domain/ReviewRepository.java
 com/reservationsystem/domain/Review.java
  com.reservationsystem.domain.Review
  com.reservationsystem.domain.Review$ReviewBuilder
-com/reservationsystem/domain/MenuItemRepository.java
- com.reservationsystem.domain.MenuItemRepository
-com/reservationsystem/domain/RegionRepository.java
- com.reservationsystem.domain.RegionRepository
-com/reservationsystem/domain/UserRepository.java
- com.reservationsystem.domain.UserRepository

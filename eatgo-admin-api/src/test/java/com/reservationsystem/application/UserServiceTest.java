@@ -2,7 +2,7 @@ package com.reservationsystem.application;
 
 import com.reservationsystem.domain.User;
 import com.reservationsystem.domain.UserRepository;
-import org.assertj.core.api.Assertions;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -10,11 +10,14 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.verify;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Optional;
 
 
 public class UserServiceTest{
@@ -47,12 +50,40 @@ public class UserServiceTest{
 
         User user = users.get(0);
 
-        Assertions.assertThat(user.getName()).isEqualTo("tester");
+        assertThat(user.getName(),is("tester"));
     }
 
+    @Test
     public void addUser(){
 
+        String email = "admin@exmaple.com";
+        String name = "Administrator";
 
+        User mockUser = User.builder().email(email).name(name).build();
+
+        given(userRepository.save(any())).willReturn(mockUser);
+
+        User user = userService.addUser(email, name);
+
+        assertThat(user.getName(),is("Administrator"));
+    }
+
+    @Test
+    public void updateUser(){
+
+        String email = "admin@exmaple.com";
+        String name = "Superman";
+        Long id = 1004L;
+        Long level = 100L;
+
+        User mockUser = User.builder().email(email).name(name).build();
+
+        given(userRepository.findById(id)).willReturn(Optional.of(mockUser));
+        User user = userService.updateUser(email, name, id, level);
+
+        verify(userRepository).findById(eq(id));
+
+        assertThat(user.getName(), is("Superman"));
     }
 
 }

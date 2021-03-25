@@ -18,6 +18,7 @@ import java.util.List;
 
 import static org.hamcrest.core.StringContains.containsString;
 
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
 
 import static org.mockito.Mockito.verify;
@@ -58,14 +59,33 @@ public class UserControllerTest{
 
         User user = User.builder().email(email).name(name).build();
 
-        given(userService.addUsers(email, name)).willReturn(user);
+        given(userService.addUser(email, name)).willReturn(user);
+
         mvc.perform(post("/users")
                 .contentType(MediaType.APPLICATION_JSON)
         .content("{\"email\":\"admin@exmaple.com\",\"name\":\"Administrator\"}"))
                 .andExpect(status().isCreated());
 
 
-        verify(userService).addUsers(email,name);
+        verify(userService).addUser(email,name);
+    }
+
+    @Test
+    public void update() throws Exception {
+
+        mvc.perform(patch("/users/1004")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"email\":\"admin@exmaple.com\"," +
+                        "\"name\":\"Administrator\",\"level\":100}"))
+                .andExpect(status().isOk());
+
+        Long id = 1004L;
+        String email = "admin@exmaple.com";
+        String name = "Administrator";
+        Long level = 100L;
+
+        verify(userService).updateUser(email,name, id,level);
+
     }
 
 }

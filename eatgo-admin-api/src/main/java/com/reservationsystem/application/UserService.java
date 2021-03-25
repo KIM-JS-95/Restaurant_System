@@ -25,10 +25,22 @@ public class UserService {
         return users;
     }
 
-    public User addUsers(String email, String name){
+    public User addUser(String email, String name){
 
         User user = User.builder().email(email).name(name).build();
+
+
        return userRepository.save(user);
     }
 
+    public User updateUser(String email, String name, Long id, Long level) {
+
+        User user = userRepository.findById(id).orElse(null);
+
+        user.setEmail(email);
+        user.setName(name);
+        user.setLevel(level);
+
+        return user;
+    }
 }

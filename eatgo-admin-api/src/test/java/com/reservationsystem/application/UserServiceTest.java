@@ -79,11 +79,34 @@ public class UserServiceTest{
         User mockUser = User.builder().email(email).name(name).build();
 
         given(userRepository.findById(id)).willReturn(Optional.of(mockUser));
+
         User user = userService.updateUser(email, name, id, level);
 
         verify(userRepository).findById(eq(id));
 
         assertThat(user.getName(), is("Superman"));
+    }
+
+    @Test
+    public void delete1(){
+
+        Long id = 1004L;
+
+        User mockUser = User.builder()
+                .id(id)
+                .email("admin@exmaple.com")
+                .name("Administrator")
+                .level(100L)
+                .build();
+
+        given(userRepository.findById(id)).willReturn(Optional.of(mockUser));
+
+        User user = userService.deleteuser(1004L);
+
+        verify(userRepository).findById(1004L);
+
+      assertThat(user.isAdmin(),is(false));
+        assertThat(user.isActive(),is(false));
     }
 
 }

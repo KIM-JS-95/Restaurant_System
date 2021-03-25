@@ -88,4 +88,17 @@ public class UserControllerTest{
 
     }
 
+    @Test
+    public void delete1() throws Exception{
+
+        Long id = 1004L;
+
+        mvc.perform(delete("/users/1004"))
+                .andExpect(status().isOk());
+
+        given(userService.deleteuser(id));
+
+        verify(userService).deleteuser(id);
+    }
+
 }

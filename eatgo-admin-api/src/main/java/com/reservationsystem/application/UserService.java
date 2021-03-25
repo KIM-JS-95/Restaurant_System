@@ -43,4 +43,12 @@ public class UserService {
 
         return user;
     }
+
+    public User deleteuser(Long id) {
+
+       User user= userRepository.findById(id).orElse(null);
+
+       user.deativate();
+        return user;
+    }
 }

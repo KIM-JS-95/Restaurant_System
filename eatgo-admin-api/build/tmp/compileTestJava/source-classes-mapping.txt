@@ -2,8 +2,8 @@ com/reservationsystem/application/ReviewServiceTest.java
  com.reservationsystem.application.ReviewServiceTest
 com/reservationsystem/application/MenuItemServiceTest.java
  com.reservationsystem.application.MenuItemServiceTest
-com/reservationsystem/application/RestaurantServiceTest.java
- com.reservationsystem.application.RestaurantServiceTest
+com/reservationsystem/application/UserServiceTest.java
+ com.reservationsystem.application.UserServiceTest
 com/reservationsystem/interfaces/MenuItemControllerTest.java
  com.reservationsystem.interfaces.MenuItemControllerTest
 com/reservationsystem/interfaces/ReviewControllerTest.java
@@ -20,7 +20,7 @@ com/reservationsystem/interfaces/CategoryControllerTest.java
  com.reservationsystem.interfaces.CategoryControllerTest
 com/reservationsystem/interfaces/RestaurantControllerTest.java
  com.reservationsystem.interfaces.RestaurantControllerTest
+com/reservationsystem/application/RestaurantServiceTest.java
+ com.reservationsystem.application.RestaurantServiceTest
 com/reservationsystem/interfaces/UserControllerTest.java
  com.reservationsystem.interfaces.UserControllerTest
-com/reservationsystem/application/UserServiceTest.java
- com.reservationsystem.application.UserServiceTest

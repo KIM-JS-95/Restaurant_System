@@ -7,4 +7,6 @@ import java.util.List;
 public interface RegionRepository extends JpaRepository<Region, Long> {
 
     List<Region> findAll();
+
+    Region save(Region region);
 }

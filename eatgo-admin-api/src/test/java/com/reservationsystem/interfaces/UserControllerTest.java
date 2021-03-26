@@ -96,7 +96,6 @@ public class UserControllerTest{
         mvc.perform(delete("/users/1004"))
                 .andExpect(status().isOk());
 
-        given(userService.deleteuser(id));
 
         verify(userService).deleteuser(id);
     }

@@ -8,8 +8,8 @@ com/reservationsystem/application/MenuItemService.java
  com.reservationsystem.application.MenuItemService
 com/reservationsystem/EatgoCustomerApiApplication.java
  com.reservationsystem.EatgoCustomerApiApplication
-com/reservationsystem/interfaces/MenuItemController.java
- com.reservationsystem.interfaces.MenuItemController
+com/reservationsystem/interfaces/RestaurantController.java
+ com.reservationsystem.interfaces.RestaurantController
 com/reservationsystem/application/RestaurantService.java
  com.reservationsystem.application.RestaurantService
 com/reservationsystem/interfaces/CategoryController.java
@@ -22,5 +22,5 @@ com/reservationsystem/interfaces/RegionController.java
  com.reservationsystem.interfaces.RegionController
 com/reservationsystem/interfaces/ReviewController.java
  com.reservationsystem.interfaces.ReviewController
-com/reservationsystem/interfaces/RestaurantController.java
- com.reservationsystem.interfaces.RestaurantController
+com/reservationsystem/interfaces/MenuItemController.java
+ com.reservationsystem.interfaces.MenuItemController

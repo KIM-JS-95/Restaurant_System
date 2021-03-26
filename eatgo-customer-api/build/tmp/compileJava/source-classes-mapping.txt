@@ -24,3 +24,9 @@ com/reservationsystem/interfaces/ReviewController.java
  com.reservationsystem.interfaces.ReviewController
 com/reservationsystem/interfaces/MenuItemController.java
  com.reservationsystem.interfaces.MenuItemController
+com/reservationsystem/SecurityJavaConfig.java
+ com.reservationsystem.SecurityJavaConfig
+com/reservationsystem/interfaces/UserService.java
+ com.reservationsystem.interfaces.UserService
+com/reservationsystem/interfaces/UserController.java
+ com.reservationsystem.interfaces.UserController

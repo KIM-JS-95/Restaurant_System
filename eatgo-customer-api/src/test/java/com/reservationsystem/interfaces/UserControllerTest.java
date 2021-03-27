@@ -1,9 +1,7 @@
 package com.reservationsystem.interfaces;
 
-import com.reservationsystem.application.ReviewService;
-import com.reservationsystem.domain.Review;
+import com.reservationsystem.application.UserService;
 import com.reservationsystem.domain.User;
-import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,7 @@
-package com.reservationsystem.interfaces;
+package com.reservationsystem.application;
 
 import com.reservationsystem.domain.User;
 import com.reservationsystem.domain.UserRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -28,8 +27,8 @@ public class UserService {
             throw new EmailExistedException(email);
         }
 
-        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(password);
 
         User mockUser = User.builder()

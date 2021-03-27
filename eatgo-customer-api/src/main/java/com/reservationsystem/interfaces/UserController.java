@@ -1,6 +1,7 @@
 package com.reservationsystem.interfaces;
 
 
+import com.reservationsystem.application.UserService;
 import com.reservationsystem.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

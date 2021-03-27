@@ -1,5 +1,7 @@
 package com.reservationsystem.interfaces;
 
+import com.reservationsystem.application.EmailExistedException;
+import com.reservationsystem.application.UserService;
 import com.reservationsystem.domain.User;
 import com.reservationsystem.domain.UserRepository;
 import org.junit.Before;

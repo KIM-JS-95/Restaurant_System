@@ -1,4 +1,4 @@
-package com.reservationsystem.interfaces;
+package com.reservationsystem.application;
 
 public class EmailExistedException extends RuntimeException {
 

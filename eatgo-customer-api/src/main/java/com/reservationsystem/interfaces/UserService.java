@@ -1,12 +1,44 @@
 package com.reservationsystem.interfaces;
 
 import com.reservationsystem.domain.User;
+import com.reservationsystem.domain.UserRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
 
 @Service
 public class UserService {
 
+
+    private UserRepository userRepository;
+
+    @Autowired
+    public UserService(UserRepository userRepository){
+        this.userRepository= userRepository;
+    }
+
     public User registerUser(String email, String name, String password) {
-        return null;
+        Optional<User>existed = userRepository.findByEmail(email);
+        if(existed.isPresent()){
+            throw new EmailExistedException(email);
+        }
+
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+        String encodedPassword = passwordEncoder.encode(password);
+
+        User mockUser = User.builder()
+                .email(email)
+                .name(name)
+                .password(encodedPassword)
+                .level(1L)
+                .build();
+
+        return userRepository.save(mockUser);
     }
 }

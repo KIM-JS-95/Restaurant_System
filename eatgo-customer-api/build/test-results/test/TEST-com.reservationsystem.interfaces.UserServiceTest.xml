@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reservationsystem.interfaces.UserServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-27T08:57:05" hostname="DESKTOP-R7AB2GV" time="0.936">
+<testsuite name="com.reservationsystem.interfaces.UserServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-30T09:34:51" hostname="DESKTOP-R7AB2GV" time="0.82">
   <properties/>
-  <testcase name="registerWithExistedEmail" classname="com.reservationsystem.interfaces.UserServiceTest" time="0.936"/>
+  <testcase name="authenticateWithWrongPassword" classname="com.reservationsystem.interfaces.UserServiceTest" time="0.82"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,9 +1,22 @@
+com/reservationsystem/application/EmailNotExistedException.java
+ com.reservationsystem.application.EmailNotExistedException
+com/reservationsystem/application/UserService.java
+ com.reservationsystem.application.UserService
 com/reservationsystem/interfaces/RestaurantErrorAdvice.java
  com.reservationsystem.interfaces.RestaurantErrorAdvice
+com/reservationsystem/interfaces/SessionController.java
+ com.reservationsystem.interfaces.SessionController
 com/reservationsystem/application/RegionService.java
  com.reservationsystem.application.RegionService
-com/reservationsystem/interfaces/ReviewController.java
- com.reservationsystem.interfaces.ReviewController
+com/reservationsystem/application/SessionResponseDTO.java
+ com.reservationsystem.application.SessionResponseDTO
+ com.reservationsystem.application.SessionResponseDTO$SessionResponseDTOBuilder
+com/reservationsystem/interfaces/SessionRequestDTO.java
+ com.reservationsystem.interfaces.SessionRequestDTO
+com/reservationsystem/interfaces/SessionErrorAdvice.java
+ com.reservationsystem.interfaces.SessionErrorAdvice
+com/reservationsystem/interfaces/UserController.java
+ com.reservationsystem.interfaces.UserController
 com/reservationsystem/application/ReviewService.java
  com.reservationsystem.application.ReviewService
 com/reservationsystem/application/MenuItemService.java
@@ -14,21 +27,21 @@ com/reservationsystem/interfaces/RestaurantController.java
  com.reservationsystem.interfaces.RestaurantController
 com/reservationsystem/SecurityJavaConfig.java
  com.reservationsystem.SecurityJavaConfig
+com/reservationsystem/application/EmailExistedException.java
+ com.reservationsystem.application.EmailExistedException
 com/reservationsystem/application/RestaurantService.java
  com.reservationsystem.application.RestaurantService
 com/reservationsystem/interfaces/CategoryController.java
  com.reservationsystem.interfaces.CategoryController
-com/reservationsystem/interfaces/MenuItemController.java
- com.reservationsystem.interfaces.MenuItemController
 com/reservationsystem/interfaces/WelcomeController.java
  com.reservationsystem.interfaces.WelcomeController
 com/reservationsystem/application/CategoryService.java
  com.reservationsystem.application.CategoryService
 com/reservationsystem/interfaces/RegionController.java
  com.reservationsystem.interfaces.RegionController
-com/reservationsystem/interfaces/UserService.java
- com.reservationsystem.interfaces.UserService
-com/reservationsystem/interfaces/UserController.java
- com.reservationsystem.interfaces.UserController
-com/reservationsystem/interfaces/EmailExistedException.java
- com.reservationsystem.interfaces.EmailExistedException
+com/reservationsystem/application/PasswordWrongException.java
+ com.reservationsystem.application.PasswordWrongException
+com/reservationsystem/interfaces/ReviewController.java
+ com.reservationsystem.interfaces.ReviewController
+com/reservationsystem/interfaces/MenuItemController.java
+ com.reservationsystem.interfaces.MenuItemController

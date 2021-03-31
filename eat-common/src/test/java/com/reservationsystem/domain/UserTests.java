@@ -1,8 +1,11 @@
 package com.reservationsystem.domain;
 
+import org.hamcrest.Matcher;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 public class UserTests {
 
@@ -34,4 +37,13 @@ public class UserTests {
         assertThat(user.isRestaurantOwner()).isTrue();
         assertThat(user.getRestaurantId()).isEqualTo(1004L);
     }
+
+    @Test
+    public void accessToken(){
+        User user = User.builder().password("ACCESSTOKEN").build();
+
+
+        assertThat(user.getAccessToken(), is("ACCESSTOKEN"));
+    }
+
 }

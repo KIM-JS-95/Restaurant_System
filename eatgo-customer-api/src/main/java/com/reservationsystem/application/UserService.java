@@ -19,15 +19,15 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder){
-        this.userRepository= userRepository;
-        this.passwordEncoder=passwordEncoder;
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
 
     public User registerUser(String email, String name, String password) {
-        Optional<User>existed = userRepository.findByEmail(email);
-        if(existed.isPresent()){
+        Optional<User> existed = userRepository.findByEmail(email);
+        if (existed.isPresent()) {
             throw new EmailExistedException(email);
         }
 
@@ -47,9 +47,9 @@ public class UserService {
     public User authenticate(String email, String password) {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(
-                        ()-> new EmailExistedException(email));
+                        () -> new EmailExistedException(email));
 
-        if(!passwordEncoder.matches(password, user.getPassword())){
+        if (!passwordEncoder.matches(password, user.getPassword())) {
             throw new PasswordWrongException();
         }
 

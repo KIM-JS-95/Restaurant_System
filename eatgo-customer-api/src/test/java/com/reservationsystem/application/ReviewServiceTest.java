@@ -1,6 +1,5 @@
 package com.reservationsystem.application;
 
-import com.reservationsystem.application.ReviewService;
 import com.reservationsystem.domain.Review;
 import com.reservationsystem.domain.ReviewRepository;
 import org.junit.Before;

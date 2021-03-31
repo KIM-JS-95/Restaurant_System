@@ -20,13 +20,13 @@ com/reservationsystem/domain/UserRepository.java
  com.reservationsystem.domain.UserRepository
 com/reservationsystem/domain/CategoryRepository.java
  com.reservationsystem.domain.CategoryRepository
-com/reservationsystem/domain/User.java
- com.reservationsystem.domain.User
- com.reservationsystem.domain.User$UserBuilder
+com/reservationsystem/domain/Review.java
+ com.reservationsystem.domain.Review
+ com.reservationsystem.domain.Review$ReviewBuilder
 com/reservationsystem/domain/RestaurantRepository.java
  com.reservationsystem.domain.RestaurantRepository
 com/reservationsystem/domain/ReviewRepository.java
  com.reservationsystem.domain.ReviewRepository
-com/reservationsystem/domain/Review.java
- com.reservationsystem.domain.Review
- com.reservationsystem.domain.Review$ReviewBuilder
+com/reservationsystem/domain/User.java
+ com.reservationsystem.domain.User
+ com.reservationsystem.domain.User$UserBuilder

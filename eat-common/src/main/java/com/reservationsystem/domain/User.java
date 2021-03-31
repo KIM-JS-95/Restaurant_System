@@ -1,6 +1,7 @@
 package com.reservationsystem.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 
@@ -56,5 +57,11 @@ public class User {
 
     public boolean isRestaurantOwner() {
         return level == 50L;
+    }
+
+
+    @JsonIgnore
+    public String getAccessToken() {
+        return password.substring(0,10);
     }
 }

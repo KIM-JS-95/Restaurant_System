@@ -3,6 +3,7 @@ package com.reservationsystem.interfaces;
 
 import com.reservationsystem.application.SessionResponseDTO;
 import com.reservationsystem.application.UserService;
+import com.reservationsystem.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,11 +24,11 @@ public class SessionController {
             @RequestBody SessionRequestDTO resource
     ) throws URISyntaxException {
 
-        String accessToken = "ACCESSTOKEN";
-
-
         String email = resource.getEmail();
         String password = resource.getPassword();
+
+        User user = userService.authenticate(email, password);
+        String accessToken = user.getAccessToken();
 
         userService.authenticate(email, password);
         SessionResponseDTO sessionDTO = SessionResponseDTO.builder().accessToken(accessToken).build();

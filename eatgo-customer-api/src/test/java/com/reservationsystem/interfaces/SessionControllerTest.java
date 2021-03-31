@@ -3,6 +3,7 @@ package com.reservationsystem.interfaces;
 import com.reservationsystem.application.EmailNotExistedException;
 import com.reservationsystem.application.PasswordWrongException;
 import com.reservationsystem.application.UserService;
+import com.reservationsystem.domain.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,26 @@ public class SessionControllerTest {
 
     @MockBean
     private UserService userService;
+
+
+    @Test
+    public void createWithValidAttributes() throws Exception {
+        String email = "tester@example.com";
+        String password = "test";
+
+        User mockUser = User.builder().password("ACCESSTOKEN").build();
+        given(userService.authenticate(email, password)).willReturn(mockUser);
+
+        mvc.perform(post("/session")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"email\":\"tester@example.com\",\"password\":\"test\"}"))
+                .andExpect(status().isCreated())
+                .andExpect(header().string("location", "/session"))
+                .andExpect(content().string("{\"accessToken\":\"ACCESSTOKEN\"}"));
+
+        verify(userService).authenticate(eq(email), eq(password));
+    }
+
 
     @Test
     public void createWithInValidAttributes() throws Exception{

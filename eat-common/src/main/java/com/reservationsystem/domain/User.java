@@ -59,9 +59,4 @@ public class User {
         return level == 50L;
     }
 
-
-    @JsonIgnore
-    public String getAccessToken() {
-        return password.substring(0,10);
-    }
 }

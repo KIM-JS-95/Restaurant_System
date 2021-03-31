@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.341s</div>
+<div class="counter">0.110s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="percent">66%</div>
 <p>successful</p>
 </div>
 </td>
@@ -76,12 +76,13 @@
 <a name="createWithValidAttributes"></a>
 <h3 class="failures">createWithValidAttributes</h3>
 <span class="code">
-<pre>java.lang.AssertionError: Response content expected:&lt;{&quot;accessToken&quot;:&quot;ACCESSTOKEN&quot;}&gt; but was:&lt;{&quot;accessToken&quot;:&quot;ACCESSTOKE&quot;}&gt;
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.ContentResultMatchers.lambda$string$4(ContentResultMatchers.java:136)
+<pre>java.lang.AssertionError: Response content
+Expected: a string containing &quot;{\&quot;accessToken\&quot;:\&quot;header.payload.signature\&quot;}&quot;
+     but: was &quot;{&quot;accessToken&quot;:null}&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.springframework.test.web.servlet.result.ContentResultMatchers.lambda$string$3(ContentResultMatchers.java:129)
 	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:196)
-	at com.reservationsystem.interfaces.SessionControllerTest.createWithValidAttributes(SessionControllerTest.java:49)
+	at com.reservationsystem.interfaces.SessionControllerTest.createWithValidAttributes(SessionControllerTest.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -171,8 +172,18 @@
 </tr>
 </thead>
 <tr>
+<td class="success">createWithInValidAttributes</td>
+<td class="success">0.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createWithNotExistedEmail</td>
+<td class="success">0.020s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="failures">createWithValidAttributes</td>
-<td class="failures">0.341s</td>
+<td class="failures">0.056s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -180,15 +191,7 @@
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:28:32.009 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.reservationsystem.interfaces.SessionControllerTest]
-23:28:32.010 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.reservationsystem.interfaces.SessionControllerTest]
-23:28:32.011 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.reservationsystem.interfaces.SessionControllerTest]
-23:28:32.011 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.reservationsystem.interfaces.SessionControllerTest]
-23:28:32.019 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6f98ebf6 testClass = SessionControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7919621a testClass = SessionControllerTest, locations = '{}', classes = '{class com.reservationsystem.EatgoCustomerApiApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@5bb09619, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@7a2fe525, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@243dad9c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@33fb8f05, [ImportsContextCustomizer@600bbac9 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6b7f1404, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@11d6a34a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@29d22441], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-23:28:32.024 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.reservationsystem.interfaces.SessionControllerTest]
-23:28:32.024 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.reservationsystem.interfaces.SessionControllerTest]
-23:28:32.222 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true, server.port=-1}
-
+<pre>
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -197,18 +200,18 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.1.RELEASE)
 
-2021-03-31 23:28:32.794  INFO 13360 --- [    Test worker] c.r.interfaces.SessionControllerTest     : Starting SessionControllerTest on DESKTOP-R7AB2GV with PID 13360 (started by JAESEUNG in C:\Users\JAESEUNG\IdeaProjects\reservating_system\eatgo-customer-api)
-2021-03-31 23:28:32.799  INFO 13360 --- [    Test worker] c.r.interfaces.SessionControllerTest     : No active profile set, falling back to default profiles: default
-2021-03-31 23:28:35.111  INFO 13360 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2021-04-01 00:35:51.944  INFO 12664 --- [    Test worker] c.r.interfaces.SessionControllerTest     : Starting SessionControllerTest on DESKTOP-R7AB2GV with PID 12664 (started by JAESEUNG in C:\Users\JAESEUNG\IdeaProjects\reservating_system\eatgo-customer-api)
+2021-04-01 00:35:51.945  INFO 12664 --- [    Test worker] c.r.interfaces.SessionControllerTest     : No active profile set, falling back to default profiles: default
+2021-04-01 00:35:52.436  INFO 12664 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 3ad80711-bad2-4907-8799-692f429e8a04
+Using generated security password: cf62fed4-96cb-4052-982d-91545d4c1603
 
-2021-03-31 23:28:35.381  INFO 13360 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fc74fcd, org.springframework.security.web.context.SecurityContextPersistenceFilter@6617658d, org.springframework.security.web.header.HeaderWriterFilter@2005eebd, org.springframework.security.web.authentication.logout.LogoutFilter@738f8113, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@525eefbf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e07ea00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24c233f0, org.springframework.security.web.session.SessionManagementFilter@550b5799, org.springframework.security.web.access.ExceptionTranslationFilter@14dca7fb]
-2021-03-31 23:28:35.897  INFO 13360 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-31 23:28:36.326  INFO 13360 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2021-03-31 23:28:36.326  INFO 13360 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-03-31 23:28:36.351  INFO 13360 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 25 ms
-2021-03-31 23:28:36.401  INFO 13360 --- [    Test worker] c.r.interfaces.SessionControllerTest     : Started SessionControllerTest in 4.165 seconds (JVM running for 6.47)
+2021-04-01 00:35:52.552  INFO 12664 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33c30ee0, org.springframework.security.web.context.SecurityContextPersistenceFilter@606a7ac8, org.springframework.security.web.header.HeaderWriterFilter@5f270174, org.springframework.security.web.authentication.logout.LogoutFilter@a308255, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27777a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65bcea3f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31ace7b5, org.springframework.security.web.session.SessionManagementFilter@290eba32, org.springframework.security.web.access.ExceptionTranslationFilter@3acb069f]
+2021-04-01 00:35:52.780  INFO 12664 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-01 00:35:53.027  INFO 12664 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-04-01 00:35:53.028  INFO 12664 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-04-01 00:35:53.046  INFO 12664 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 18 ms
+2021-04-01 00:35:53.079  INFO 12664 --- [    Test worker] c.r.interfaces.SessionControllerTest     : Started SessionControllerTest in 1.179 seconds (JVM running for 15.337)
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -242,7 +245,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Location:&quot;/session&quot;, Content-Type:&quot;application/json&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;]
      Content type = application/json
-             Body = {&quot;accessToken&quot;:&quot;ACCESSTOKE&quot;}
+             Body = {&quot;accessToken&quot;:null}
     Forwarded URL = null
    Redirected URL = /session
           Cookies = []
@@ -257,7 +260,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7</a> at 2021. 3. 31. 오후 11:28:36</p>
+<a href="http://www.gradle.org">Gradle 6.7</a> at 2021. 4. 1. 오전 12:35:54</p>
 </div>
 </div>
 </body>

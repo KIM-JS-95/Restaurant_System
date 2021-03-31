@@ -38,12 +38,5 @@ public class UserTests {
         assertThat(user.getRestaurantId()).isEqualTo(1004L);
     }
 
-    @Test
-    public void accessToken(){
-        User user = User.builder().password("ACCESSTOKEN").build();
-
-
-        assertThat(user.getAccessToken(), is("ACCESSTOKEN"));
-    }
 
 }

@@ -2,12 +2,8 @@ com/reservationsystem/application/ReviewServiceTest.java
  com.reservationsystem.application.ReviewServiceTest
 com/reservationsystem/EatgoCustomerApiApplicationTest.java
  com.reservationsystem.EatgoCustomerApiApplicationTest
-com/reservationsystem/interfaces/UserServiceTest.java
- com.reservationsystem.interfaces.UserServiceTest
-com/reservationsystem/interfaces/UserControllerTest.java
- com.reservationsystem.interfaces.UserControllerTest
-com/reservationsystem/interfaces/ReviewControllerTest.java
- com.reservationsystem.interfaces.ReviewControllerTest
+com/reservationsystem/application/RestaurantServiceTest.java
+ com.reservationsystem.application.RestaurantServiceTest
 com/reservationsystem/application/RegionServiceTest.java
  com.reservationsystem.application.RegionServiceTest
 com/reservationsystem/application/SessionDTOTest.java
@@ -16,11 +12,13 @@ com/reservationsystem/interfaces/RegionControllerTest.java
  com.reservationsystem.interfaces.RegionControllerTest
 com/reservationsystem/application/CategoryServiceTest.java
  com.reservationsystem.application.CategoryServiceTest
+com/reservationsystem/application/UserServiceTest.java
+ com.reservationsystem.application.UserServiceTest
 com/reservationsystem/interfaces/CategoryControllerTest.java
  com.reservationsystem.interfaces.CategoryControllerTest
-com/reservationsystem/interfaces/SessionControllerTest.java
- com.reservationsystem.interfaces.SessionControllerTest
+com/reservationsystem/interfaces/UserControllerTest.java
+ com.reservationsystem.interfaces.UserControllerTest
 com/reservationsystem/interfaces/RestaurantControllerTest.java
  com.reservationsystem.interfaces.RestaurantControllerTest
-com/reservationsystem/application/RestaurantServiceTest.java
- com.reservationsystem.application.RestaurantServiceTest
+com/reservationsystem/interfaces/ReviewControllerTest.java
+ com.reservationsystem.interfaces.ReviewControllerTest

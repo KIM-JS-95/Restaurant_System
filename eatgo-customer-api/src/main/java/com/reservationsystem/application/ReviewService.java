@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReviewService {
 
+
     private ReviewRepository reviewRepository;
 
     @Autowired
@@ -15,9 +16,15 @@ public class ReviewService {
         this.reviewRepository = reviewRepository;
     }
 
+    public Review addReview(Long restaurantId, String name, Integer score,
+                            String description) {
+        Review review = Review.builder()
+                .restaurantId(restaurantId)
+                .name(name)
+                .score(score)
+                .description(description)
+                .build();
 
-    public Review addReview(Long restaurantId, Review review) {
-        review.setRestaurantId(restaurantId);
         return reviewRepository.save(review);
     }
 }

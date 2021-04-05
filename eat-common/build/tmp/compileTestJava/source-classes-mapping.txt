@@ -4,7 +4,7 @@ com/reservationsystem/domain/UserTests.java
  com.reservationsystem.domain.UserTests
 com/reservationsystem/domain/CategoryTests.java
  com.reservationsystem.domain.CategoryTests
-com/reservationsystem/domain/RegionTests.java
- com.reservationsystem.domain.RegionTests
 com/reservationsystem/utils/JwtUtilTest.java
  com.reservationsystem.utils.JwtUtilTest
+com/reservationsystem/domain/RegionTests.java
+ com.reservationsystem.domain.RegionTests

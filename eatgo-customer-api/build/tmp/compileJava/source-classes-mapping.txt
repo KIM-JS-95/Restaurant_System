@@ -1,20 +1,9 @@
-com/reservationsystem/application/EmailNotExistedException.java
- com.reservationsystem.application.EmailNotExistedException
 com/reservationsystem/application/UserService.java
  com.reservationsystem.application.UserService
 com/reservationsystem/interfaces/RestaurantErrorAdvice.java
  com.reservationsystem.interfaces.RestaurantErrorAdvice
-com/reservationsystem/interfaces/SessionController.java
- com.reservationsystem.interfaces.SessionController
 com/reservationsystem/application/RegionService.java
  com.reservationsystem.application.RegionService
-com/reservationsystem/application/SessionResponseDTO.java
- com.reservationsystem.application.SessionResponseDTO
- com.reservationsystem.application.SessionResponseDTO$SessionResponseDTOBuilder
-com/reservationsystem/interfaces/SessionRequestDTO.java
- com.reservationsystem.interfaces.SessionRequestDTO
-com/reservationsystem/interfaces/SessionErrorAdvice.java
- com.reservationsystem.interfaces.SessionErrorAdvice
 com/reservationsystem/interfaces/UserController.java
  com.reservationsystem.interfaces.UserController
 com/reservationsystem/application/ReviewService.java
@@ -23,6 +12,8 @@ com/reservationsystem/application/MenuItemService.java
  com.reservationsystem.application.MenuItemService
 com/reservationsystem/EatgoCustomerApiApplication.java
  com.reservationsystem.EatgoCustomerApiApplication
+com/reservationsystem/filter/JwtAuthenticationFilter.java
+ com.reservationsystem.filter.JwtAuthenticationFilter
 com/reservationsystem/interfaces/RestaurantController.java
  com.reservationsystem.interfaces.RestaurantController
 com/reservationsystem/SecurityJavaConfig.java
@@ -39,8 +30,6 @@ com/reservationsystem/application/CategoryService.java
  com.reservationsystem.application.CategoryService
 com/reservationsystem/interfaces/RegionController.java
  com.reservationsystem.interfaces.RegionController
-com/reservationsystem/application/PasswordWrongException.java
- com.reservationsystem.application.PasswordWrongException
 com/reservationsystem/interfaces/ReviewController.java
  com.reservationsystem.interfaces.ReviewController
 com/reservationsystem/interfaces/MenuItemController.java

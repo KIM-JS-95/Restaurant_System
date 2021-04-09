@@ -21,7 +21,9 @@ public class Review {
     @GeneratedValue
     private Long id;
 
-    @NotEmpty
+    @Setter
+    private Long restaurantId;
+
     private String name;
 
     @NotNull
@@ -29,8 +31,5 @@ public class Review {
 
     @NotEmpty
     private String description;
-
-    @Setter
-    private Long restaurantId;
 
 }

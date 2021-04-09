@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reservationsystem.application.UserServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-04-05T12:48:43" hostname="DESKTOP-R7AB2GV" time="0.03">
+<testsuite name="com.reservationsystem.application.UserServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-04-09T05:22:04" hostname="DESKTOP-R7AB2GV" time="0.107">
   <properties/>
-  <testcase name="addUser" classname="com.reservationsystem.application.UserServiceTest" time="0.023"/>
-  <testcase name="updateUser" classname="com.reservationsystem.application.UserServiceTest" time="0.002"/>
-  <testcase name="delete1" classname="com.reservationsystem.application.UserServiceTest" time="0.003"/>
-  <testcase name="getUsers" classname="com.reservationsystem.application.UserServiceTest" time="0.001"/>
+  <testcase name="addUser" classname="com.reservationsystem.application.UserServiceTest" time="0.087"/>
+  <testcase name="updateUser" classname="com.reservationsystem.application.UserServiceTest" time="0.005"/>
+  <testcase name="delete1" classname="com.reservationsystem.application.UserServiceTest" time="0.004"/>
+  <testcase name="getUsers" classname="com.reservationsystem.application.UserServiceTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

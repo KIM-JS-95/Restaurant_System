@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     url: jdbc:h2:~/data/eatgo
@@ -25,5 +24,4 @@ spring:
     username: ${MYSQL_USER}
     password: ${MYSQL_PASSWORD}
 
-spring.h2.console.enabled: true
 

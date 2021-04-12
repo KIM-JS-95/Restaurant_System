@@ -1,0 +1,6 @@
+com/reservationsystem/EatgoLoginApiApplicationTest.java
+ com.reservationsystem.EatgoLoginApiApplicationTest
+com/reservationsystem/application/UserServiceTest.java
+ com.reservationsystem.application.UserServiceTest
+com/reservationsystem/interfaces/SessionControllerTest.java
+ com.reservationsystem.interfaces.SessionControllerTest

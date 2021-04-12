@@ -4,6 +4,7 @@ package com.reservationsystem.interfaces;
 import com.reservationsystem.application.ReservationService;
 import com.reservationsystem.domain.Reservation;
 import io.jsonwebtoken.Claims;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -25,7 +27,7 @@ public class ReservationController {
     public ResponseEntity<?> create(
             Authentication authentication,
             @PathVariable Long restaurantId,
-            @RequestBody Reservation resource
+            @Valid @RequestBody Reservation resource
             ) throws URISyntaxException {
         Claims claims = (Claims) authentication.getPrincipal();
 

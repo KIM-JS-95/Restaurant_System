@@ -1,6 +1,7 @@
 package com.reservationsystem.interfaces;
 
 import com.reservationsystem.application.ReservationService;
+import com.reservationsystem.domain.Reservation;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +12,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -29,8 +31,11 @@ public class ReservationControllerTest {
 
     @Test
     public void create() throws Exception{
-
         String token = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEwMDQsIm5hbWUiOiJKb2huIn0.8hm6ZOJykSINHxL-rf0yV882fApL3hyQ9-WGlJUyo2A";
+
+
+        Reservation mockReservation = Reservation.builder().id(12L).build();
+        given(reservationService.addReservation(any(), any(),any(), any(),any(), any() )).willReturn(mockReservation);
 
         Long userId=1004L;
         String name ="John";
@@ -44,6 +49,8 @@ public class ReservationControllerTest {
         .content("{\"date\":\"2019-12-24\",\"time\":\"20:00\"," +
                 "\"partySize\":20}"))
                 .andExpect(status().isCreated());
+
+
 
         verify(reservationService)
                 .addReservation(369L, userId, name, date, time, partySize);

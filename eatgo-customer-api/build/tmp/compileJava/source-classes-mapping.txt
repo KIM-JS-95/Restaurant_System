@@ -30,6 +30,10 @@ com/reservationsystem/application/CategoryService.java
  com.reservationsystem.application.CategoryService
 com/reservationsystem/interfaces/RegionController.java
  com.reservationsystem.interfaces.RegionController
+com/reservationsystem/interfaces/ReservationController.java
+ com.reservationsystem.interfaces.ReservationController
+com/reservationsystem/application/ReservationService.java
+ com.reservationsystem.application.ReservationService
 com/reservationsystem/interfaces/ReviewController.java
  com.reservationsystem.interfaces.ReviewController
 com/reservationsystem/interfaces/MenuItemController.java

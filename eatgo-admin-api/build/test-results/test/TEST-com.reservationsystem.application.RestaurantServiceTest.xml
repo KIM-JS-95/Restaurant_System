@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reservationsystem.application.RestaurantServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-12T13:14:06" hostname="DESKTOP-R7AB2GV" time="0.04">
+<testsuite name="com.reservationsystem.application.RestaurantServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-04-15T10:33:25" hostname="DESKTOP-R7AB2GV" time="0.05">
   <properties/>
-  <testcase name="addRestaurant" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.032"/>
+  <testcase name="addRestaurant" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.04"/>
   <testcase name="Restaurants" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.001"/>
-  <testcase name="getRestaurantWithNotExisted" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.001"/>
-  <testcase name="getRestaurantWithExisted" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.0"/>
+  <testcase name="getRestaurantWithNotExisted" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.002"/>
+  <testcase name="getRestaurantWithExisted" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.002"/>
   <testcase name="getRestaurants" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.001"/>
-  <testcase name="updateRestaurant" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.001"/>
+  <testcase name="updateRestaurant" classname="com.reservationsystem.application.RestaurantServiceTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

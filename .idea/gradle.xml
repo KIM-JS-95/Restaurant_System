@@ -14,7 +14,6 @@
             <option value="$PROJECT_DIR$/eatgo-admin-api" />
             <option value="$PROJECT_DIR$/eatgo-customer-api" />
             <option value="$PROJECT_DIR$/eatgo-login-api" />
-            <option value="$PROJECT_DIR$/eatgo-restaurant-api" />
           </set>
         </option>
       </GradleProjectSettings>

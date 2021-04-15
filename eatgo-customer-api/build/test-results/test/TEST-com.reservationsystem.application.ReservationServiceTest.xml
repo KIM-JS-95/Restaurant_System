@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reservationsystem.application.ReservationServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-12T13:14:23" hostname="DESKTOP-R7AB2GV" time="0.135">
+<testsuite name="com.reservationsystem.application.ReservationServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-15T10:33:43" hostname="DESKTOP-R7AB2GV" time="0.138">
   <properties/>
-  <testcase name="addReservation" classname="com.reservationsystem.application.ReservationServiceTest" time="0.135"/>
+  <testcase name="addReservation" classname="com.reservationsystem.application.ReservationServiceTest" time="0.138"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

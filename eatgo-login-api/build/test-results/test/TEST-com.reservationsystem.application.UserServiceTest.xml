@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reservationsystem.application.UserServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-04-22T00:42:56" hostname="DESKTOP-R7AB2GV" time="0.188">
-  <properties/>
-  <testcase name="authenticateWithNotExistedEmail()" classname="com.reservationsystem.application.UserServiceTest" time="0.176"/>
-  <testcase name="authenticateWithValidAttributes()" classname="com.reservationsystem.application.UserServiceTest" time="0.007"/>
-  <testcase name="authenticateWithWrongPassword()" classname="com.reservationsystem.application.UserServiceTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

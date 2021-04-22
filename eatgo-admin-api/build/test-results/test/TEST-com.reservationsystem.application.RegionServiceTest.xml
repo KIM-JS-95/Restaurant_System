@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reservationsystem.application.RegionServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-04-22T00:42:24" hostname="DESKTOP-R7AB2GV" time="0.049">
-  <properties/>
-  <testcase name="addRegion" classname="com.reservationsystem.application.RegionServiceTest" time="0.048"/>
-  <testcase name="getRegions" classname="com.reservationsystem.application.RegionServiceTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

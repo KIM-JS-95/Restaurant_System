@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.reservationsystem.application.MenuItemServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-04-22T00:42:23" hostname="DESKTOP-R7AB2GV" time="0.061">
-  <properties/>
-  <testcase name="getMenuItems" classname="com.reservationsystem.application.MenuItemServiceTest" time="0.047"/>
-  <testcase name="bulkUpdate" classname="com.reservationsystem.application.MenuItemServiceTest" time="0.014"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

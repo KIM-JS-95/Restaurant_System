@@ -36,6 +36,7 @@ dependencies {
     implementation 'io.jsonwebtoken:jjwt-api:0.10.7'
     runtime 'io.jsonwebtoken:jjwt-impl:0.10.7'
     runtime 'io.jsonwebtoken:jjwt-jackson:0.10.7'
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testCompile('org.springframework.boot:spring-boot-starter-test')

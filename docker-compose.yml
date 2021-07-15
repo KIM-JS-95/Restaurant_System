@@ -19,13 +19,13 @@ services:
     image: openjdk:8
     env_file: .env
     volumes:
-      - ./run.sh:/home/eatgo/run.sh
+      - ./run.sh:/home/reservatingsystem/run.sh
       - ./eatgo-login-api/build/libs:/home/reservatingsystem/libs
     ports:
       - 8001:8080
     depends_on:
       - mysql
-    command: bash -c "cd /home/reservatingsystem && sh run.sh"
+    command: bash -c "cd /home/reservatingsystem  && sh run.sh"
 
   admin-api:
     image: openjdk:8
@@ -71,7 +71,7 @@ services:
     environment:
       - VUE_APP_API_BASE_URL=http://localhost:8002
       - VUE_APP_LOGIN_API_BASE_URL=http://localhost:8001
-    command: bash -c "cd /home/eatgo && npm run serve"
+    command: bash -c "cd /home/reservatingsystem && npm install && npm run serve"
     healthcheck:
       test: curl -sS http://localhost:8080 || exit 1
       timeout: 10s
@@ -86,7 +86,7 @@ services:
     environment:
       - VUE_APP_API_BASE_URL=http://localhost:8003
       - VUE_APP_LOGIN_API_BASE_URL=http://localhost:8001
-    command: bash -c "cd /home/reservatingsystem && npm run serve"
+    command: bash -c "cd /home/reservatingsystem && npm install && npm run serve"
     healthcheck:
       test: curl -sS http://localhost:8080 || exit 1
       timeout: 10s
@@ -101,7 +101,7 @@ services:
     environment:
       - VUE_APP_API_BASE_URL=http://localhost:8004
       - VUE_APP_LOGIN_API_BASE_URL=http://localhost:8001
-    command: bash -c "cd /home/reservatingsystem && npm run serve"
+    command: bash -c "cd /home/reservatingsystem && npm install && npm run serve"
     healthcheck:
       test: curl -sS http://localhost:8080 || exit 1
       timeout: 10s

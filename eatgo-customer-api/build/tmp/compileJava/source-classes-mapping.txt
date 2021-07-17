@@ -16,8 +16,8 @@ com/reservationsystem/filter/JwtAuthenticationFilter.java
  com.reservationsystem.filter.JwtAuthenticationFilter
 com/reservationsystem/interfaces/RestaurantController.java
  com.reservationsystem.interfaces.RestaurantController
-com/reservationsystem/SecurityJavaConfig.java
- com.reservationsystem.SecurityJavaConfig
+com/reservationsystem/application/ReservationService.java
+ com.reservationsystem.application.ReservationService
 com/reservationsystem/application/EmailExistedException.java
  com.reservationsystem.application.EmailExistedException
 com/reservationsystem/application/RestaurantService.java
@@ -32,9 +32,9 @@ com/reservationsystem/interfaces/RegionController.java
  com.reservationsystem.interfaces.RegionController
 com/reservationsystem/interfaces/ReservationController.java
  com.reservationsystem.interfaces.ReservationController
-com/reservationsystem/application/ReservationService.java
- com.reservationsystem.application.ReservationService
-com/reservationsystem/interfaces/ReviewController.java
- com.reservationsystem.interfaces.ReviewController
 com/reservationsystem/interfaces/MenuItemController.java
  com.reservationsystem.interfaces.MenuItemController
+com/reservationsystem/interfaces/ReviewController.java
+ com.reservationsystem.interfaces.ReviewController
+com/reservationsystem/SecurityJavaConfig.java
+ com.reservationsystem.SecurityJavaConfig

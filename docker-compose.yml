@@ -62,6 +62,9 @@ services:
       - mysql
     command: bash -c "cd /home/reservatingsystem && sh run.sh"
 
+
+
+
   admin-web:
     image: node:10.16.3
     volumes:

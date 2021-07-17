@@ -1,11 +1,12 @@
 package com.reservationsystem.domain;
 
-import com.reservationsystem.domain.Reservation;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface ReservationRepository extends CrudRepository<Long, Reservation> {
+@Repository
+public interface ReservationRepository extends CrudRepository<Reservation,Long> {
 
     Reservation save(Reservation reservation);
 

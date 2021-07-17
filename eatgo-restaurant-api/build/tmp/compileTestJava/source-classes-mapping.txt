@@ -1,0 +1,6 @@
+com/reservationsystem/EatgoRestaurantApiApplicationTests.java
+ com.reservationsystem.EatgoRestaurantApiApplicationTests
+com/reservationsystem/application/ReservationServiceTests.java
+ com.reservationsystem.application.ReservationServiceTests
+com/reservationsystem/interfaces/ReservationControllerTests.java
+ com.reservationsystem.interfaces.ReservationControllerTests

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.reservationsystem.application.ReservationServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-17T15:17:07" hostname="DESKTOP-R7AB2GV" time="0.577">
+  <properties/>
+  <testcase name="getReservations()" classname="com.reservationsystem.application.ReservationServiceTests" time="0.577"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

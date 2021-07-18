@@ -10,15 +10,6 @@ Front-end 부분을 함께 구현하면 보일 부분을 스크린샷으로 첨�
 ![map](https://user-images.githubusercontent.com/65659478/112718369-d389e380-8f35-11eb-97b5-f7e9b3b6b5d4.jpg)
 
 
-사용자(CUSTUMER) / 관리자(ADMIN) / 공통(COMMON) 으로 구분
-
-```bash
-implementation project(':eat-common')
-```
-
-## Data Base Relation
-![DB](https://user-images.githubusercontent.com/65659478/112718366-d258b680-8f35-11eb-9a01-4b6a1f40f2aa.jpg)
-
 
 # Features
 
@@ -101,6 +92,10 @@ implementation project(':eat-common')
     - User 생성시 패스워드 암호화
     - 리뷰 추가시 이름 입력 없이 토큰 인증
 
+## 5. Data Base Relation
+![DB](https://user-images.githubusercontent.com/65659478/112718366-d258b680-8f35-11eb-9a01-4b6a1f40f2aa.jpg)
+
+
 
 # Stacks
 * Java
@@ -109,6 +104,7 @@ implementation project(':eat-common')
 * JPA
 * H2 DATABASE
 * JWT
+* Docker
 * Git
 
 
